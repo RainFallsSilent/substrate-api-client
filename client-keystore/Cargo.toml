@@ -10,10 +10,7 @@ async-trait = "0.1.30"
 hex = "0.4.2"
 serde_json = "1.0"
 
-[dependencies.sp-core]
-git = "https://github.com/paritytech/substrate.git"
-package = "sp-core"
-default-features = false
+sp-core = "3.0.0"
 
 [dependencies.sp-keystore]
 git = "https://github.com/paritytech/substrate.git"
