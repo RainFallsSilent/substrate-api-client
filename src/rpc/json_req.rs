@@ -83,6 +83,14 @@ pub fn state_get_storage(key: StorageKey, at_block: Option<Hash>) -> Value {
     )
 }
 
+pub fn state_get_storage_by_str(key_hash: &str) -> Value {
+    state_get_storage_with_id_by_str(key_hash, 1)
+}
+
+pub fn state_get_storage_with_id_by_str(key_hash: &str, id: u32) -> Value {
+    json_req("state_getStorage", key_hash, id)
+}
+
 pub fn state_get_storage_with_id(key: StorageKey, at_block: Option<Hash>, id: u32) -> Value {
     json_req(
         "state_getStorage",
